@@ -26,8 +26,6 @@
 
 ;;; Code:
 
-(require 's)
-
 (defcustom treesit-fold-summary-show t
   "Flag to show summary if available."
   :type 'boolean
@@ -104,7 +102,7 @@ type of content by checking the word boundary's existence."
 (defun treesit-fold-summary-csharp-vsdoc (doc-str)
   "Extract summary from DOC-STR in C# vsdoc."
   (let ((type-triple (string-match-p "///" doc-str)))
-    (setq doc-str (s-replace-regexp "<[/]*[^>]+." "" doc-str))
+    (setq doc-str (replace-regexp-in-string "<[/]*[^>]+." "" doc-str))
     (treesit-fold-summary--generic doc-str (if type-triple "///" "//"))))
 
 (defun treesit-fold-summary-csharp (doc-str)
@@ -158,8 +156,8 @@ type of content by checking the word boundary's existence."
 (defun treesit-fold-summary-c-macro (doc-str)
   "Parse C macro summary from DOC-STR."
   (when (treesit-fold--is-face doc-str
-                          '(font-lock-preprocessor-face
-                            preproc-font-lock-preprocessor-background))
+                               '(font-lock-preprocessor-face
+                                 preproc-font-lock-preprocessor-background))
     (treesit-fold-summary--doc-extract doc-str "")))
 
 (defun treesit-fold-summary-c (doc-str)
