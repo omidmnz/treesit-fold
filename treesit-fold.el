@@ -247,7 +247,8 @@ For example, Lua, Ruby, etc."
 (defun treesit-fold-ready-p ()
   (and (fboundp 'treesit-available-p)
        (treesit-available-p)
-       (ignore-errors (treesit-buffer-root-node))))
+       (ignore-errors (treesit-buffer-root-node))
+       t))
 
 (defun treesit-fold--trigger ()
   "Turn `treesit-fold-mode' on and off when the current mode is treesit-fold compatible."
@@ -373,9 +374,7 @@ Return nil otherwise."
 (defmacro treesit-fold--ensure-treesit (&rest body)
   "Run BODY only when `treesit' is available."
   (declare (indent 0))
-  `(if (treesit-fold-ready-p)
-       (progn ,@body)
-     (message "treesit-fold: no available parser for the current buffer.")))
+  `(when (treesit-fold-ready-p) ,@body))
 
 ;;;###autoload
 (defun treesit-fold-close (&optional node)

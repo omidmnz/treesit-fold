@@ -434,11 +434,12 @@
 
 (defun treesit-fold-parsers-python ()
   "Rule set for Python."
-  '((function_definition  . treesit-fold-range-python-def)
-    (class_definition     . treesit-fold-range-python-def)
-    (list                 . treesit-fold-range-seq)
-    (dictionary           . treesit-fold-range-seq)
-    (expression_statement . treesit-fold-range-python-expression-statement)
+  '((function_definition      . treesit-fold-range-python-def)
+    (class_definition         . treesit-fold-range-python-def)
+    (list                     . treesit-fold-range-seq)
+    (dictionary               . treesit-fold-range-seq)
+    (parenthesized_expression . treesit-fold-range-seq)
+    (expression_statement     . treesit-fold-range-python-expression-statement)
     (comment
      . (lambda (node offset)
          (treesit-fold-range-line-comment node offset "#")))))
