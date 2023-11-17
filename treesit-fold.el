@@ -225,6 +225,9 @@ For example, Lua, Ruby, etc."
   (setq-local line-move-ignore-invisible t)
   (add-to-invisibility-spec '(treesit-fold . t))
 
+  (when (bound-and-true-p hs-minor-mode)
+    (hs-minor-mode -1))
+
   ;; evil integration
   (when (bound-and-true-p evil-fold-list)
     (add-to-list 'evil-fold-list
