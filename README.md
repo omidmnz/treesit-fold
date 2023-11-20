@@ -6,6 +6,8 @@
 
 [![CI](https://github.com/abougouffa/treesit-fold/actions/workflows/test.yml/badge.svg)](https://github.com/emacs-tree-sitter/treesit-fold/actions/workflows/test.yml)
 
+**THIS IS A WORK IN PROGRESS, IT IS NOT STABLE**
+
 `treesit-fold` is a fork of
 [[ts-fold](https://github.com/emacs-tree-sitter/ts-fold)](https://github.com/emacs-tree-sitter/ts-fold/actions/workflows/test.yml) that uses Emacs 29+
 builtin tree-sitter (`treesit`) to provide code folding based on the tree-sitter
