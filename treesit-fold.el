@@ -211,7 +211,8 @@ For example, Lua, Ruby, etc."
   :group 'treesit-fold)
 
 (defcustom treesit-fold-modes '(prog-mode conf-mode python-ts-mode)
-  "Modes in which `treesit-fold-mode' gets enabled.")
+  "Modes in which `treesit-fold-mode' gets enabled."
+  :type '(repeat symbol))
 
 ;;
 ;; (@* "Externals" )
