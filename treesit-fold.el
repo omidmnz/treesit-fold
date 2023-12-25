@@ -1039,7 +1039,7 @@ more information."
 
 For arguments NODE and OFFSET, see function `treesit-fold-range-seq' for
 more information."
-  (let* ((first (car (treesit-fold-get-children node)))
+  (let* ((first (car (treesit-node-children node)))
          (beg (treesit-node-end first))
          (end (treesit-node-end node))
          (same-pos (= beg end))
