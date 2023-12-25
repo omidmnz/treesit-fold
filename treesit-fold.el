@@ -200,7 +200,7 @@ For example, Lua, Ruby, etc."
   :group 'treesit-fold)
 
 (defface treesit-fold-replacement-face
-  '((t :foreground "#808080" :box '(:line-width -1 :style 'pressed-button)))
+  '((t :foreground "#808080" :box (:line-width -1 :style pressed-button)))
   "Face used to display the fold replacement text."
   :group 'treesit-fold)
 
