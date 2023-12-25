@@ -135,6 +135,7 @@
     (markdown-mode          . ,(treesit-fold-parsers-markdown))
     (noir-mode              . ,(treesit-fold-parsers-noir))
     (nix-mode               . ,(treesit-fold-parsers-nix))
+    (nix-ts-mode            . ,(treesit-fold-parsers-nix))
     (ocaml-mode             . ,(treesit-fold-parsers-ocaml))
     (ocaml-ts-mode          . ,(treesit-fold-parsers-ocaml))
     (org-mode               . ,(treesit-fold-parsers-org))
