@@ -29,6 +29,7 @@
 (require 'cl-lib)
 (require 'seq)
 (require 'subr-x)
+(require 'treesit)
 
 (require 'fringe-helper)
 

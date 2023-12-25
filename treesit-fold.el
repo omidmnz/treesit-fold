@@ -39,6 +39,7 @@
 
 (require 'seq)
 (require 'subr-x)
+(require 'treesit)
 
 (require 'treesit-fold-util)
 (require 'treesit-fold-parsers)

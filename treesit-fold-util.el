@@ -30,6 +30,8 @@
 ;; (@* "Redisplay" )
 ;;
 
+(require 'treesit)
+
 (defmacro treesit-fold--with-no-redisplay (&rest body)
   "Execute BODY without any redisplay execution."
   (declare (indent 0) (debug t))

@@ -36,6 +36,8 @@
 
 ;; TODO(everyone): keep the forward declared alphabetically sorted
 
+(require 'treesit)
+
 (declare-function treesit-fold-range-seq "treesit-fold.el")
 (declare-function treesit-fold-range-line-comment "treesit-fold.el")
 (declare-function treesit-fold-range-block-comment "treesit-fold.el")
