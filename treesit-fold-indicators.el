@@ -309,7 +309,7 @@ Argument FOLDED holds folding state; it's a boolean."
 (defun treesit-fold-indicators-refresh (&rest _)
   "Refresh indicators for all folding range."
   (when (and (ignore-errors (treesit-buffer-root-node)) treesit-fold-indicators-mode)
-    (treesit-fold--ensure-ts
+    (treesit-fold--ensure-treesit
       (when-let*
           ((node (ignore-errors (treesit-buffer-root-node)))
            (patterns (seq-mapcat (lambda (fold-range) `((,(car fold-range)) @name))
