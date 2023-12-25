@@ -314,8 +314,7 @@ Argument FOLDED holds folding state; it's a boolean."
       (when-let*
           ((node (ignore-errors (treesit-buffer-root-node)))
            (patterns (seq-mapcat (lambda (fold-range) `((,(car fold-range)) @name))
-                                 (alist-get major-mode treesit-fold-range-alist)
-                                 'vector))
+                                 (alist-get major-mode treesit-fold-range-alist)))
            (query (ignore-errors
                     (treesit-query-compile (treesit-node-language node) patterns)))
            (nodes-to-fold (treesit-query-capture node query))
