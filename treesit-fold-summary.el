@@ -28,6 +28,8 @@
 
 (require 'treesit)
 
+(require 'treesit-fold-util)
+
 (defcustom treesit-fold-summary-show t
   "Flag to show summary if available."
   :type 'boolean
